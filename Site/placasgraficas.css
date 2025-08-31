@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.logo img {
+  width: 300px;
+}
+.opcao {
+  border-radius: 10px;
+  box-shadow: 10px 10px 40px;
+  text-align: center;
+  width: 250px;
+  background-color: rgb(36, 35, 41);
+  position: fixed;
+  height: 400px;
+}
+.opcao a {
+  font-size: 25px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  color: rgb(218, 218, 218);
+  border-bottom: 2px solid rgb(218, 218, 218);
+  transition: .1s;
+}
+.opcao a:hover {
+  color: white;
+  border-bottom: 4px solid white;
+}
+.opcao h2 {
+  margin-top: 40px;
+  color: white;
+  font-size: 30px;
+}
+#gpu {
+  color: white;
+  font-size: 30px;
+  border-bottom: 4px solid rgb(211, 35, 35);
+}
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: rgb(36, 35, 41);
+  padding: 20px;
+  margin: 40px 20px 20px 280px;
+  border-radius: 10px;
+}
+.gpu {
+  box-shadow: 10px 10px 40px black;
+  background-color: rgb(52, 52, 59);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.gpu img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+}
+.footer {
+  background-color: rgb(36, 35, 41);
+  height: 300px;
+  margin: 20px;
+  border-radius: 10px;
+}

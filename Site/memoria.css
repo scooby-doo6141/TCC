@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+/*logo*/
+.logo img{
+    width: 300px;
+}
+
+/*opçao de peças*/
+.opcao {
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px;
+    align-items: center;
+    text-align: center;
+    display: block;
+    height: 400px;
+    width: 250px;
+    background-color: rgb(36, 35, 41);
+    position: fixed;
+    margin-top: 0px;
+}
+
+.opcao a {
+    font-size: 25px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(218, 218, 218);
+    border-bottom: 2px solid rgb(218, 218, 218);
+    border-radius: 2px;
+    transition: .1s ease-in-out;
+}
+
+.opcao a:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 4px solid white;
+}
+
+.opcao h2 {
+    margin-top: 40px;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mr {
+    color: white;
+    font-size: 30px;
+    border-bottom: 4px solid rgb(211, 35, 35);
+}
+
+/*produtos*/
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+    gap: 20px; /* espaço entre os cards */
+    background-color: rgb(36, 35, 41);
+    padding: 20px;
+    margin: 40px 20px 20px 280px;
+    border-radius: 10px;
+}
+
+.produtos img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.memoria-ram {
+    box-shadow: 10px 10px 40px black;
+    background-color: rgb(52, 52, 59);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.memoria-ram img {
+    width: 100%;   /* ocupa toda a largura do card */
+    max-width: 250px; 
+    border-radius: 10px;
+}
+
+/*rodapé*/
+.footer {
+    background-color: rgb(36, 35, 41);
+    height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
