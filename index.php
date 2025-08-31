@@ -38,7 +38,7 @@
     <div class="navMenu">
       <a href="memoria.html">Peças</a>
       <a href="#">Sobre nós</a>
-      <a id="login" href="DADOS/login.php">Cadastrar</a>
+      <a id="login" href="login.php">Cadastrar</a>
     </div>
   </div>
   <!-- Banner central -->
