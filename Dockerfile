@@ -1,20 +1,18 @@
 # Usa PHP com Apache
 FROM php:8.2-apache
 
-# Ativa mod_rewrite
-RUN a2enmod rewrite
-
 # Copia todos os arquivos do projeto para o servidor web
 COPY . /var/www/html/
 
-# Configura o Apache para usar a porta do Railway
-RUN sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf
+# Habilita mod_rewrite caso precise
+RUN a2enmod rewrite
 
-# Copia configuração do VirtualHost
-COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+# Define a porta do Railway como variável de ambiente (Railway geralmente usa 8080)
+ENV PORT 8080
+EXPOSE 8080
 
-# Expõe a porta do Railway
-EXPOSE ${PORT}
+# Ajusta o ServerName para suprimir avisos
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Comando para iniciar o Apache
+# Inicia o Apache em primeiro plano
 CMD ["apache2-foreground"]
