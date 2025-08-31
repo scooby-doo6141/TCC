@@ -1,15 +1,17 @@
 # Usa PHP com Apache
 FROM php:8.2-apache
 
-# Copia todos os arquivos do projeto
+# Copia o código para o Apache
 COPY . /var/www/html/
 
-# Define o ServerName para remover o aviso
+# Define o ServerName para evitar warning
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Expõe a porta do Railway
-ENV APACHE_LISTEN_PORT=$PORT
-RUN sed -i "s/80/${APACHE_LISTEN_PORT}/g" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
+# Faz o Apache escutar a porta do Railway
+RUN sed -i "s/Listen 80/Listen \${PORT}/" /etc/apache2/ports.conf
 
-# Roda o Apache em primeiro plano
+# Expõe a porta (Railway define a variável PORT)
+EXPOSE 8080
+
+# Inicia o Apache
 CMD ["apache2-foreground"]
